@@ -1,5 +1,7 @@
 package main
 
+// Link: https://leetcode.com/problems/richest-customer-wealth/
+
 import "fmt"
 
 func maximumWealth(accounts [][]int) int {
