@@ -1,7 +1,5 @@
-# Description
+# LeetCode
 
-I dump my [LeetCode](https://leetcode.com) submission codes here.
+My [LeetCode](https://leetcode.com/) solutions, written in Go.
 
-Feel free to correct my codes if you find any mistakes! 😉
-
-My [LeetCode Profile](https://leetcode.com/u/bagashiz/)
+Structured based on [NeetCode's Roadmap](https://neetcode.io/roadmap/).
