@@ -9,8 +9,8 @@ import (
 
 func TestContainsDuplicate(t *testing.T) {
 	testCases := []struct {
-		input []int
-		want  bool
+		nums []int
+		want bool
 	}{
 		{[]int{1, 2, 3, 1}, true},
 		{[]int{1, 2, 3, 4}, false},
@@ -20,7 +20,7 @@ func TestContainsDuplicate(t *testing.T) {
 	for i, tc := range testCases {
 		index := fmt.Sprint(i)
 		t.Run(index, func(t *testing.T) {
-			got := arrayshashing.ContainsDuplicate(tc.input)
+			got := arrayshashing.ContainsDuplicate(tc.nums)
 			if got != tc.want {
 				t.Errorf("[case: %s] got %v, want %v", index, got, tc.want)
 				return
