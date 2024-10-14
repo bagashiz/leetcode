@@ -1,4 +1,4 @@
-package arrayshashing
+package twopointers
 
 import "strings"
 

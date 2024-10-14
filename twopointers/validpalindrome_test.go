@@ -1,10 +1,10 @@
-package arrayshashing_test
+package twopointers_test
 
 import (
 	"fmt"
 	"testing"
 
-	"github.com/bagashiz/leetcode/arrayshashing"
+	"github.com/bagashiz/leetcode/twopointers"
 )
 
 func TestIsPalindrome(t *testing.T) {
@@ -21,7 +21,7 @@ func TestIsPalindrome(t *testing.T) {
 	for i, tc := range testCases {
 		index := fmt.Sprint(i)
 		t.Run(index, func(t *testing.T) {
-			got := arrayshashing.IsPalindrome(tc.s)
+			got := twopointers.IsPalindrome(tc.s)
 			if got != tc.want {
 				t.Errorf("[case: %s] got %v, want %v", index, got, tc.want)
 				return
