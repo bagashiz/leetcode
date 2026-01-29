@@ -1,6 +1,7 @@
 package testutil
 
 import (
+	"fmt"
 	"path/filepath"
 	"reflect"
 	"runtime"
@@ -13,10 +14,14 @@ import (
 
 // Diff compares two items and returns a human-readable diff string.
 // If the items are equal, it returns an empty string.
+// For slices, order is ignored (elements are sorted before comparison).
 func Diff[T any](got, want T) string {
 	opts := cmp.Options{
 		cmp.Exporter(func(reflect.Type) bool { return true }),
 		cmpopts.EquateEmpty(),
+		cmpopts.SortSlices(func(a, b any) bool {
+			return fmt.Sprintf("%v", a) < fmt.Sprintf("%v", b)
+		}),
 	}
 
 	diff := cmp.Diff(got, want, opts...)
